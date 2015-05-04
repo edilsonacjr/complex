@@ -43,44 +43,56 @@
       <div class="col-lg-6">
 
 
-          <br>
-          <h3>Resolução de ambiguidades</h3>
-        <p>Recentemente, uma grande quantidade de abordagens estatísticas tem sido desenvolvidas para abordar temas relacionados à linguagem
+          <h3>Introdução</h3>
+              <p>
+      Recentemente, uma grande quantidade de abordagens estatísticas tem sido desenvolvidas para abordar temas relacionados à linguagem
        e suas aplicações [Golder e Macy 2011, Michel et al. 2011, Amancio, Jr e Costa 2012]. Conceitos advindos de várias áreas do conhecimento
-       tem sido aplicados para estudar aspectos distintos da linguagem [Costa et al. 2011].[...] <a href="intro.html" >Mais.</a></p>
+       tem sido aplicados para estudar aspectos distintos da linguagem [Costa et al. 2011].
+</p>
+<p>
+        Nos últimos quinze anos, a linguagem e tarefas relacionadas passaram a ser estudadas sob um ponto de vista de sistemas complexos
+        [Newman 2010]. Uma vez que as técnicas tradicionais em computação geralmente ignoram informações referentes a estrutura de
+        longo-alcance de conexão conceitos, os pesquisadores têm utilizado os métodos de redes complexas para revelar novos padrões
+        textuais [Cong e Liu 2014]. Exemplos de aplicações envolvendo uma visão estrutural da linguagem via redes complexas incluem a avaliação
+        da qualidade de traduções automáticas [Amancio et al. 2008], sumarização extrativa [Amancio et al. 2012] e a recuperação de informação
+        [Mihalcea e Radev 2011].
+</p>
+<p>
+        Do ponto de vista teórico, as redes têm sido úteis para estudar padrões da linguagem [Cancho e Solé 2003],
+        incluindo seus aspectos evolutivos  e outras propriedades fundamentais, como as leis de Zipf e as leis de estruturação sintática
+        [Amancio, Oliveira Jr e Costa 2012]. Interessantemente, um dos padrões mais interessantes relacionados ao estudo da linguagem através de
+        redes referem-se ao fato de que a maioria das linguagens, mesmo quando modeladas com diferentes regras sintáticas, apresenta características
+        similares, como é o caso dos efeitos pequeno-mundo [Watts e Strogatz 1998] e livre de escala [Dangalchev 2004].
+</p>
 
 
-         <img src="images/net3.png" class="img-responsive" alt=" ">
-
-        <h3>Qual a hipótese, objetivo e motivação desta pesquisa?</h3>
-        <p>As abordagens estatísticas aplicadas ao processamento de línguas naturais tem se difundido nos últimos anos. Essa
-          popularidade é fruto do desempenho razoável obtido em várias aplicações [Manning e Schutze 1999]. Apesar disso,
-          algumas tarefas ainda demandam um processamento mais eficiente, como é o caso, por exemplo, da desambiguação
-          lexical de sentido, uma tarefa fundamental para um entendimento efetivo do conteúdo textual.[...] <a href="hipo.html" >Mais.</a></p>
-
-        <img src="images/net5.jpg" class="img-responsive" alt=" ">
 
       </div>
       <div class="col-lg-6">
-      <img src="images/net4.jpg" class="img-responsive" alt=" ">
 
-        <h3>Desambiguação Lexical de Sentido</h3>
-        <p > O fenômeno da ambiguidade, que está fortemente presente na fala e na escrita, ocorre quando a interpretação dos vários sentidos
-          depende do contexto em que uma determinada palavra ou expressão ocorre. A trivialidade aparente desse problema é justificada
-          pela facilidade na qual os seres humanos conseguem resolver problemas de ambiguidade quase que imediatamente, porém o
-          processo de desambiguação automática em textos ainda representa um desafio aos linguistas e outros pesquisadores ligados ao
-          estudo de linguagem [Navigli 2009].[...] <a href="lexical.html" >Mais.</a></p>
+      <h3>O que pretendemos fazer ?</h3>
+      <p>
+Neste projeto, pretendemos avaliar a capacidade de redes complexas para a tarefa de identificação de sentidos em textos. Nesta tarefa,
+abordagens tradicionais fazem uso de atributos contextuais de palavras vizinhas que aparecem ao redor da palavra ambígua. Em tais métodos,
+o contexto das palavras ambíguas é reconhecido através de atributos como a classe gramatical ou as relações sintáticas entre as palavras do
+contexto [Manning e Schutze 1999]. A abordagem denominada de abordagem baseada em conhecimento baseia-se na análise de bases de
+conhecimento  como thesauri, ontologias e dicionários para caracterizar o contexto das palavras ambíguas [Lesk 1986].
+</p>
+<p>
+Levando em consideração o fato de que a maioria das estratégias desconsideram a estrutura de conectividade das palavras para discriminar
+sentidos, neste projeto pretendemos desenvolver uma abordagem que utiliza este tipo de informação. Através da modelagem de textos como
+redes complexas, pretendemos identificar o contexto de palavras ambíguas através da caracterização baseada em medidas topológicas.
+</p>
+<p>
+Mais importante do que apenas utilizar os atributos topológicos, pretendemos desenvolver formas que possibilitem combinar os atributos tradicionais
+com os atributos advindos das redes complexas. Devido à generalidade do modelo proposto, iremos avaliá-lo também em uma tarefa correlata
+e não menos importante, a tarefa de desambiguação de nomes em redes de colaboração. Tendo em vista o ineditismo dos métodos e combinações
+propostas, acreditamos que as técnicas a serem desenvolvidas podem ser expandidas para outras tarefas de processamento de línguas naturais
+que ainda não se beneficiam da rica informação implícita sob a forma de conectividade.
+</p>
 
-         <h3>Desambiguação de Autores</h3>
-        <p >Com o constante crescimento de textos científicos disponíveis, a ambiguidade em nomes de autores tem se
-          tornado cada vez mais comum.[...] <a href="autores.html" >Mais.</a></p>
-
-
-        <h3>Materiais e Métodos</h3>
-        <p>Cada vez mais sistemas reais estão utilizando conceitos e metodologias de redes complexas como ferramenta de modelagem
-        [Costa et al. 2011]. Dentre estes  sistemas reais, estão as redes de transporte, a Internet, os sistemas biológicos e as redes sociais.[...]
-         <a href="metodos.html" >Mais.</a></p>
-
+<h3>Informações adicionais</h3>
+Essa pesquisa é financiada pela CAPES, e possui duração de dois anos (3/2015 - 2/2017).
 
       </div>
     </div>

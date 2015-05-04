@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complex Networks | Sobre o Projeto</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<!-- Font Awesome  -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<!-- Web Font  -->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="index.html"><i class="fa fa-sun-o"></i> Complex Networks</a> </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="about.html">Sobre o Projeto</a></li>
+        <li><a href="resources.html">Recursos</a></li>
+        <li><a href="team.html">Equipe</a></li>
+        <li><a href="services.html">Notícias</a></li>
+        <li ><a href="contact.html">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="section_header">
+  <div class="container">
+    <h2><span>Resolução de ambiguidades em redes sociais e de informação</span> </h2>
+  </div>
+</div>
+<div id="about_section_1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+
+
+
+<h3>Modelagem de textos com redes complexas</h3>
+<p>
+Cada vez mais sistemas reais estão utilizando conceitos e metodologias de redes complexas como ferramenta de modelagem [Costa et al. 2011]. Dentre estes  sistemas reais, estão as redes de transporte, a Internet, os sistemas biológicos e as redes sociais. O uso da modelagem desses sistemas através da representação discreta por grafos complexos possibilitou a inferência de diversos padrões que não seriam revelados com modelagens tradicionais baseadas em análises frequencionistas e em redes aleatórias de pequenas escala [Bollobás 2001].
+</p>
+<p>
+De particular interesse para os objetivos deste projeto, são as redes que tem sido utilizadas para modelar textos. Exemplos de estudos recentes que fazem uso de redes  incluem a análise de sentimento [Pang e Lee 2004, Amancio et al. 2010], tradução automática [Amancio et al. 2008], estratégias de sumarização [Amancio et al. 2012], estudo de padrões em imensas quantidades de texto [Michel et al. 2011] e a identificação de movimentos literários [Amancio, Oliveira Jr e Costa 2012].
+</p>
+<p>
+A modelagem de redes como textos envolve basicamente dois passos: o pré-processamento e a conexão de conceitos. Estes passos são apresentados respectivamente a seguir.
+</p>
+<h4>Pré-processamento</h4>
+<p>
+Para que seja possível transformar um texto em uma rede, é necessário que algum pré-processamento seja aplicado. Inicialmente, todos os sinais de pontuação e uma série de palavras de pouco conteúdo semântico (<i>stopwords</i>) são removidas, dado que normalmente o interesse está apenas em palavras com alto conteúdo semântico. Em seguida, uma etapa de lematização é aplicada nas palavras remanescentes com auxílio de um rotulador de classes gramaticais (<i>part-of-speech tagger</i>). Palavras no plural são transformadas para sua forma singular, verbos são transformados para sua forma infinitiva e nomes são convertidos para sua forma masculina. Com esta normalização, palavras referentes a um mesmo conceito são associados a um mesmo vértice, independentemente das diferenças de flexão.
+</p>
+
+
+
+      </div>
+      <div class="col-lg-6">
+
+<h4>Redes de co-ocorrência</h4>
+<p>
+Uma das formas de modelagem de uma linguagem em uma rede complexa é através do uso de redes de co-ocorrência. Esta modelagem conecta palavras adjacentes, uma vez que a escrita é composta de cadeias lineares de palavras, essa forma de associação se mostra mais natural. Este tipo de rede é amplamente difundido na literatura [Amancio et al. 2011, Cancho e Solé 2001, Roxas e Tapang 2010,
+Amancio et al. 2008].  Ela pode ser entendida como uma aproximação das ligações sintáticas estabelecidas, dado que a maioria destas acontece na primeira vizinhança do texto [Cancho, Solé e Kohler 2004,
+Cancho e Solé 2001]. Em redes de co-ocorrência, vértices representam palavras e arestas são estabelecidas entre palavras vizinhas.
+</p>
+<p>
+Exemplos da utilidade das redes de co-ocorrência para a modelagem de textos podem ser encontrados em vários trabalhos [Amancio et al. 2012, Amancio, Oliveira Jr e Costa 2012, Amancio, Jr e Costa 2012]. O que demonstra sua aplicabilidade em várias tarefas de PLN.
+</p>
+
+<h3>Medidas Topológicas</h3>
+<p>
+Dada a grande quantidade de medidas de rede existentes, neste projeto apenas algumas medidas topológicas dentre as mais relevantes serão utilizadas, segue abaixo as medidas:
+</p>
+<div class="col-lg-10 service">
+<ul >
+  <li>Grau e <i>strength</i>;</li>
+  <li>Caminhos mínimos;</li>
+  <li><i>Betweenness</i>;</li>
+  <li>Coeficiente de aglomeração;</li>
+  <li>Assortatividade</li>
+  <li>Diâmetro;</li>
+  <li><i>Motifs</i></li>
+  <li>Acessibilidade.</li>
+<ul>
+<br>
+</div>
+
+<br>
+<br>
+<h3>Reconhecimento de Padrões</h3>
+<p>
+Existe uma diversidade muito grande de técnicas utilizadas no reconhecimento de padrões disponíveis. Dentre as mais comuns, temos as técnicas de kNN, Naive Bayes, Árvores de Decisão e Support Vector Machines (SVM). Além desse conjunto de técnicas, os classificadores fuzzy são de grande interesse para este projeto, uma vez que tais classificadores permitem que sua composição seja feita a partir de múltiplas técnicas, neste caso, técnicas tradicionais de PLN e técnicas de processamento de textos com redes complexas.
+<p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Our clients Section -->
+<div id="section_header">
+  <h2><span></span> </h2>
+</div>
+<div id="clients">
+  <div class="container">
+    <div class="row centered">
+      <div class="col-lg-8 col-lg-offset-2">
+        <p></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2"><a href="http://icmc.usp.br"> <img src="images/logo-icmc.jpg" class="img-responsive"></a></div>
+      <div class="col-lg-2"><a href="http://www.nilc.icmc.usp.br/nilc/index.php">  <img src="images/logo-nilc.png" class="img-responsive"></a> </div>
+      <div class="col-lg-2"><a href="http://www.capes.gov.br">  <img src="images/logo-capes.gif" class="img-responsive"></a> </div>
+      <div class="col-lg-2"><a href="http://www.fapesp.br/"> <img src="images/logo-fapesp.png" class="img-responsive"></a> </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<div id="footerwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8"> <span class="copyright">Copyright &copy; 2015 Complex Networks. Design by <a href="http://www.templategarden.com" rel="nofollow">TemplateGarden</a></span> </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          <li><a href="https://twitter.com/anselmoedilson"><i class="fa fa-twitter"></i></a> </li>
+          <li><a href="https://www.facebook.com/edilsonacjr"><i class="fa fa-facebook"></i></a> </li>
+          <li><a href="https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=17&cad=rja&uact=8&ved=0EP0yKAAwEFABWAM&url=https%3A%2F%2Fplus.google.com%2F%2BEdilsonAnselmoCorr%25C3%25AAaJ%25C3%25BAnior%2Fabout&ei=sV5HVYQzi6WDBLnRgJgM&usg=AFQjCNHk1sFxeqMEuNa16VRsKsW3e3gTBw&sig2=xVeD3pYAOCia01MhWzSukg&bvm=bv.92291466,d.eXY"><i class="fa fa-google-plus"></i></a> </li>
+          <li><a href="https://br.linkedin.com/pub/edilson-anselmo-corrêa-júnior/8a/185/55"><i class="fa fa-linkedin"></i></a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

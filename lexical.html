@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complex Networks | Sobre o Projeto</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<!-- Font Awesome  -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<!-- Web Font  -->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="index.html"><i class="fa fa-sun-o"></i> Complex Networks</a> </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="about.html">Sobre o Projeto</a></li>
+        <li><a href="resources.html">Recursos</a></li>
+        <li><a href="team.html">Equipe</a></li>
+        <li><a href="services.html">Notícias</a></li>
+        <li ><a href="contact.html">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="section_header">
+  <div class="container">
+    <h2><span>Resolução de ambiguidades em redes sociais e de informação</span> </h2>
+  </div>
+</div>
+<div id="about_section_1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+
+
+          <h3>Desambiguação Lexical de Sentido</h3>
+          <p>
+          O fenômeno da ambiguidade, que está fortemente presente na fala e na escrita, ocorre quando a interpretação dos vários sentidos
+          depende do contexto em que uma determinada palavra ou expressão ocorre. A trivialidade aparente desse problema é justificada
+          pela facilidade na qual os seres humanos conseguem resolver problemas de ambiguidade quase que imediatamente, porém o
+          processo de desambiguação automática em textos ainda representa um desafio aos linguistas e outros pesquisadores ligados ao
+          estudo de linguagem [Navigli 2009]. Computacionalmente, a resolução de sentidos é estudada no contexto da tarefa denominada
+            desambiguação lexical de sentidos (DLS) (ou <i>word sense disambiguation</i>, em inglês).
+          </p>
+          <p>
+          O problema abordado pela DLS é classificado como um problema Completo da Inteligência Artificial [Ide e Véronis 1998]. A dificuldade enfrentada por essa área advém de uma grande variedade de fatores [Navigli 2009], dentre eles o mais proeminente é a escassez de grandes bases de conhecimento (p.e. conjunto de textos anotados, dicionários e redes semânticas) de aplicação genérica, uma vez que as bases atuais de conhecimento são, na sua maioria, bastante limitadas e restritas a contextos específicos quando comparadas à base de conhecimento humano.
+          </p>
+          <p>
+          O problema da ambiguidade lexical é fundamental para o sucesso de muitas aplicações de PLN, incluindo a tradução automática, a extração automática de informações e a análise de conteúdo [Nóbrega e Pardo 2012]. As estratégias atuais de desambiguação automática podem ser agrupadas em dois paradigmas: (i) profundo, quando bases de conhecimento são utilizadas na tentativa de simular a base de conhecimento humana, (ii) superficial, quando a informação a respeito do contexto é obtida através da análise estatística da vizinhança da palavra ambígua.
+          </p>
+          <p>
+          A abordagem a ser adotada neste projeto pode ser classificada como um paradigma superficial, uma vez que ela se baseia principalmente na organização textual e não utiliza bases de conhecimento. Além de se basear na representação de textos como redes complexas. Dessa forma os padrões de conexão na estrutura topológica da rede de co-ocorrência de palavras serão analisados para auxiliar a identificação do contexto. De maneira complementar aos métodos tradicionais, o rótulo das palavras representando o contexto será eliminado e a análise será concentrada nos padrões de recorrência da estrutura da rede.
+          </p>
+
+
+      </div>
+      <div class="col-lg-6">
+
+       <p>
+          A capacidade das redes complexas para discriminar sentido das palavras foi observada pela primeira vez no  modelo proposto em [Amancio, Oliveira Jr e Costa 2012]. Neste modelo, cada ocorrência da palavra ambígua é marcada como um vértice na rede. Através da caracterização da estrutura local dos vértices representando palavras ambíguas, uma discriminação significante de sentidos foi obtida, o que significa que diferentes sentidos afetam a organização estrutural das redes de adjacência. Em casos particulares, a discriminação observada foi tão forte que a caracterização topológica superou outros métodos superficiais tradicionais. De modo geral, o uso do conceito hierárquico [Costa e Silva 2006] das medidas de aglomeração e conectividade se mostraram como as medidas mais relevantes para a tarefa, embora a relevância tenha se mostrado dependente da palavra ambígua.
+          </p>
+          <p>
+          É proposto neste trabalho a extensão da análise desenvolvida em [Amancio, Oliveira Jr e Costa 2012], modificando inicialmente a modelagem por adjacência de palavras, para melhor adequá-las ao problema de desambiguação de sentidos. Foi demonstrado em [Amancio et al. 2013] que as medidas de redes de adjacência são mais dependentes da sintaxe do que da semântica, dessa forma, esperasse que a introdução de uma modelagem de rede que capture mais fatores semânticos seja capaz de aperfeiçoar a metodologia desenvolvida em [Amancio, Oliveira Jr e Costa 2012]. Dado que a correta discriminação de sentidos depende fortemente da identificação de contextos, uma modificação simples seria conectar palavras que pertencem a uma janela de proximidade no texto. Fazendo com que palavras que apareçam em um mesmo contexto sejam conectadas, modificando a estrutura da rede, provocando assim, o surgimento de comunidades, como pode ser visto em [Newman 2006]. Partindo da premissa que vértices pertencentes à mesma comunidade compartilhem várias propriedades topológicas [Newman 2006], há um forte indicativo que a metodologia proposta em [Amancio, Jr e Costa 2012] seja capaz de aperfeiçoar a caracterização de sentidos. Além das propriedades topológicas, métodos de detecção de comunidades em redes [Newman 2006] podem ser aplicados, pois a nova modelagem gera redes com alto coeficientes de aglomeração e modularidade [Newman 2006].
+          </p>
+          <p>
+          A abordagem proposta também deve ser útil para criar um método eficiente de detecção de comunidades em redes modulares, com um ganho efetivo de performance sem perda de acurácia. Em [Amancio, Oliveira Jr e Costa 2015] é descrito os primeiros passos para a construção deste sistema.
+          </p>
+          <p>
+          Abordagens alternativas envolveriam a combinação desta técnica com técnicas tradicionais [Navigli 2009] através de um classificador híbrido. Um estudo deverá ser feito para selecionar a melhor combinação de técnicas a serem utilizadas e uma comparação entre os vários tipos de classificadores que melhor se adequão a tarefa também.
+          </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Our clients Section -->
+<div id="section_header">
+  <h2><span></span> </h2>
+</div>
+<div id="clients">
+  <div class="container">
+    <div class="row centered">
+      <div class="col-lg-8 col-lg-offset-2">
+        <p></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2"><a href="http://icmc.usp.br"> <img src="images/logo-icmc.jpg" class="img-responsive"></a></div>
+      <div class="col-lg-2"><a href="http://www.nilc.icmc.usp.br/nilc/index.php">  <img src="images/logo-nilc.png" class="img-responsive"></a> </div>
+      <div class="col-lg-2"><a href="http://www.capes.gov.br">  <img src="images/logo-capes.gif" class="img-responsive"></a> </div>
+      <div class="col-lg-2"><a href="http://www.fapesp.br/"> <img src="images/logo-fapesp.png" class="img-responsive"></a> </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<div id="footerwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8"> <span class="copyright">Copyright &copy; 2015 Complex Networks. Design by <a href="http://www.templategarden.com" rel="nofollow">TemplateGarden</a></span> </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          <li><a href="https://twitter.com/anselmoedilson"><i class="fa fa-twitter"></i></a> </li>
+          <li><a href="https://www.facebook.com/edilsonacjr"><i class="fa fa-facebook"></i></a> </li>
+          <li><a href="https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=17&cad=rja&uact=8&ved=0EP0yKAAwEFABWAM&url=https%3A%2F%2Fplus.google.com%2F%2BEdilsonAnselmoCorr%25C3%25AAaJ%25C3%25BAnior%2Fabout&ei=sV5HVYQzi6WDBLnRgJgM&usg=AFQjCNHk1sFxeqMEuNa16VRsKsW3e3gTBw&sig2=xVeD3pYAOCia01MhWzSukg&bvm=bv.92291466,d.eXY"><i class="fa fa-google-plus"></i></a> </li>
+          <li><a href="https://br.linkedin.com/pub/edilson-anselmo-corrêa-júnior/8a/185/55"><i class="fa fa-linkedin"></i></a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
